@@ -6,33 +6,33 @@ public class whowins {
     static String[] position = new String[9];
     static String turn = "X";
 
-    String whoWins() {
+    public String whoWins() {
 		for (int i = 0; i < 8; i++) {
 			String line = null;
 			switch (i) {
 			case 0:
-				line = position[1] + position[2] + position[3];
+				line = position[0] + position[1] + position[2];
 				break;
 			case 1:
-                line = position[4] + position[5] + position[6];
+                line = position[3] + position[4] + position[5];
 				break;
 			case 2:
-                line = position[7] + position[8] + position[9];
+                line = position[6] + position[7] + position[8];
 				break;
 			case 3:
-				line = position[1] + position[4] + position[7];
+				line = position[0] + position[3] + position[6];
 				break;
 			case 4:
-				line = position[2] + position[5] + position[8];
+				line = position[1] + position[4] + position[7];
 				break;
 			case 5:
-				line = position[3] + position[6] + position[9];
+				line = position[2] + position[5] + position[8];
 				break;
 			case 6:
-				line = position[1] + position[5] + position[9];
+				line = position[0] + position[4] + position[8];
 				break;
 			case 7:
-                line = position[3] + position[5] + position[7];
+                line = position[2] + position[4] + position[6];
                 break;
             default:
                 System.out.println("No winner");

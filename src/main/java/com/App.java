@@ -2,7 +2,7 @@ package com;
 
 import java.util.Scanner;
 
-public class Test {
+public class App {
 
     static Scanner input;
 
@@ -16,12 +16,13 @@ public class Test {
 
         input = new Scanner(System.in);
         String winner = null;
-        game.makeBoard();
+        //game.makeBoard();
         game.updateBoard();
 
 
         System.out.println("Game begins ...");
         game.makeBoard();
+        game.updateBoard();
 
         while (winner == null) {
             int num = input.nextInt();
@@ -29,8 +30,8 @@ public class Test {
                 System.out.println("Invalid input is given. It should be between 0 and 9");
             }
 
-            if (position[num].equals( String.valueOf(num) )) {
-				position[num] = turn;
+            if (position[num-1].equals( String.valueOf(num) )) {
+				position[num-1] = turn;
 				if (turn.equals("X")) {
 					turn = "O";
 				} else {
