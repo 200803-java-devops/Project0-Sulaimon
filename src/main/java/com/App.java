@@ -12,11 +12,11 @@ public class App {
         InputStreamReader cin = null;
 
         TicTacToe game = new TicTacToe();
-        whowins who = new whowins();
+        // whowins who = new whowins();
 
         input = new Scanner(System.in);
         
-        String[] position = new String[9];
+        //String[] position = new String[9];
         String turn = "X";
         String winner = null;
 
@@ -39,22 +39,22 @@ public class App {
                 continue;
             }
 
-            position[num-1] = ( String.valueOf(num) );  // This line is use to force the condition below to work
+            game.position[num-1] = ( String.valueOf(num) );  // This line is use to force the condition below to work
             /*
             System.out.println(num);
             System.out.println(String.valueOf(num));
             System.out.println(position[num-1]); 
             */
 
-            if (position[num-1].equals( String.valueOf(num) )) {
-				position[num-1] = turn;
+            if (game.position[num-1].equals( String.valueOf(num) )) {
+				game.position[num-1] = turn;
 				if (turn.equals("X")) {
 					turn = "O";
 				} else {
 					turn = "X";
 				}
 				game.makeBoard();
-				winner = who.whoWins();
+				winner = game.whoWins();
 			} else {
 				System.out.println("Try again");
 				continue;
