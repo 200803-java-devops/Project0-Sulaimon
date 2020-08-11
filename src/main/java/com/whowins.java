@@ -52,7 +52,7 @@ public class whowins {
 			else if (i == 8) return "draw";
         }
         
-        System.out.println(turn + " ready " + turn );
+        System.out.println("Player X played" + turn + " Player 2 play now " + turn );
         return null;
         
 	}

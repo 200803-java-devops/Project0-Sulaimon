@@ -23,7 +23,7 @@ public class App {
         System.out.println("Game begins ...");
 
         cin = new InputStreamReader(System.in);
-        System.out.println("Player 1 enter your name, then player 2 enter your name. Enter 'x' to start game.");
+        System.out.println("Player X enter your name, then player O enter your name. Enter 'x' to start game.");
         char c;
          do {
              c = (char) cin.read();
