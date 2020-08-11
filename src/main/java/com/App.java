@@ -17,12 +17,12 @@ public class App {
         input = new Scanner(System.in);
         String winner = null;
         //game.makeBoard();
-        game.updateBoard();
+        //game.updateBoard();
 
 
         System.out.println("Game begins ...");
         game.makeBoard();
-        game.updateBoard();
+        
 
         while (winner == null) {
             int num = input.nextInt();
@@ -34,7 +34,7 @@ public class App {
 				position[num-1] = turn;
 				if (turn.equals("X")) {
 					turn = "O";
-				} else {
+				} else {0
 					turn = "X";
 				}
 				game.makeBoard();
