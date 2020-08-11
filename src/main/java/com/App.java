@@ -1,40 +1,56 @@
 package com;
 
 import java.util.Scanner;
+import java.io.*;
 
 public class App {
 
     static Scanner input;
 
-    public static void main(String[] args) {
-        String[] position = new String[9];
-        String turn = "X";
-        
+    public static void main(String[] args) throws IOException {
+
+        InputStreamReader cin = null;
+
         TicTacToe game = new TicTacToe();
         whowins who = new whowins();
 
-
         input = new Scanner(System.in);
+        
+        String[] position = new String[9];
+        String turn = "X";
         String winner = null;
-        //game.makeBoard();
-        //game.updateBoard();
-
 
         System.out.println("Game begins ...");
+
+        cin = new InputStreamReader(System.in);
+        System.out.println("Player 1 enter your name, then player 2 enter your name. Enter 'x' to start game.");
+        char c;
+         do {
+             c = (char) cin.read();
+         } while(c != 'x');
+
+        game.updateBoard();
         game.makeBoard();
         
-
         while (winner == null) {
             int num = input.nextInt();
             if ( num < 1 || num > 9 ) {
                 System.out.println("Invalid input is given. It should be between 0 and 9");
+                continue;
             }
+
+            position[num-1] = ( String.valueOf(num) );  // This line is use to force the condition below to work
+            /*
+            System.out.println(num);
+            System.out.println(String.valueOf(num));
+            System.out.println(position[num-1]); 
+            */
 
             if (position[num-1].equals( String.valueOf(num) )) {
 				position[num-1] = turn;
 				if (turn.equals("X")) {
 					turn = "O";
-				} else {0
+				} else {
 					turn = "X";
 				}
 				game.makeBoard();
