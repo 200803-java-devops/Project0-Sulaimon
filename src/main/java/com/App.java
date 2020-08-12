@@ -22,16 +22,20 @@ public class App {
 
         System.out.println("Game begins ...");
 
-        cin = new InputStreamReader(System.in);
-        System.out.println("Player X enter your name, then player O enter your name. Enter 'x' to start game.");
-        char c;
-         do {
-             c = (char) cin.read();
-         } while(c != 'x');
+        try {
+            cin = new InputStreamReader(System.in);
+            System.out.println("Player X enter your name, then player O enter your name. Enter 'x' to start game.");
+            char c;
+            do {
+                c = (char) cin.read();
+            } while(c != 'x');
 
-        game.updateBoard();
-        game.makeBoard();
-        
+            game.updateBoard();
+            game.makeBoard();
+            
+        } catch (IOException e) {
+            System.out.println("Wrong kind of input");
+        } 
         while (winner == null) {
             int num = input.nextInt();
             if ( num < 1 || num > 9 ) {

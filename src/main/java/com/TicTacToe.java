@@ -74,7 +74,7 @@ public class TicTacToe {
 			else if (i == 8) return "draw";
         }
         
-        System.out.println("Player X played" + turn + " Player 2 play now " + turn );
+        System.out.println("Next player pick any number not selected");
         return null;
     }
             
