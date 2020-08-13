@@ -1,4 +1,5 @@
-package com;
+package com.model;
+
 
 import java.util.Scanner;
 import java.io.*;
@@ -6,36 +7,36 @@ import java.io.*;
 public class App {
 
     static Scanner input;
+    static Scanner read;
 
     public static void main(String[] args) throws IOException {
 
-        InputStreamReader cin = null;
+        read = new Scanner(System.in);
+        Register player = new Register();
+        System.out.print("Enter your ID number: " + '\n');
+        player.setid1(read.nextInt());
+        System.out.print("Enter your Player X name: " + '\n');
+        player.setName1(read.nextLine());
+        System.out.print("Enter your ID number: " + '\n');
+        player.setid2(read.nextInt());
+        System.out.print("Enter your Player O name: " + '\n');
+        player.setName2(read.nextLine());
+        Register.print();
+        //read.close();
 
         TicTacToe game = new TicTacToe();
-        // whowins who = new whowins();
 
         input = new Scanner(System.in);
         
-        //String[] position = new String[9];
         String turn = "X";
         String winner = null;
 
         System.out.println("Game begins ...");
 
-        try {
-            cin = new InputStreamReader(System.in);
-            System.out.println("Player X enter your name, then player O enter your name. Enter 'x' to start game.");
-            char c;
-            do {
-                c = (char) cin.read();
-            } while(c != 'x');
-
-            game.updateBoard();
-            game.makeBoard();
+        game.updateBoard();
+        game.makeBoard();
             
-        } catch (IOException e) {
-            System.out.println("Wrong kind of input");
-        } 
+       
         while (winner == null) {
             int num = input.nextInt();
             if ( num < 1 || num > 9 ) {
