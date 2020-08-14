@@ -4,6 +4,9 @@ package com.model;
 import java.util.Scanner;
 import java.io.*;
 
+/**
+ * Main class
+ */
 public class App {
 
     static Scanner input;
@@ -11,36 +14,25 @@ public class App {
     static Scanner read;
 
     public static void main(String[] args) throws IOException {
-/*
-        read = new Scanner(System.in);
-        Register player = new Register();
-        System.out.print("Enter your ID number: " + '\n');
-        player.setid1(read.nextInt());
-        System.out.print("Enter your Player X name: " + '\n');
-        player.setName1(read.nextLine());
-        System.out.print("Enter your ID number: " + '\n');
-        player.setid2(read.nextInt());
-        System.out.print("Enter your Player O name: " + '\n');
-        player.setName2(read.nextLine());
-        Register.print();
-        //read.close();
-*/
+
         System.out.println('\n' + "Game begins with player X" + '\n');
-        System.out.println("Player X enter your name in the format \"Tag_Number,Name\". Note: Quotation marks are included.");
+        System.out.println("Player X enter your name in the format \"Tag_Number,Name. Note: First Quotation mark is included.");
         sc = new Scanner(System.in);
         String commandX = sc.nextLine();
         String[] cmdtokensX = commandX.split(",");
-        Item playerX = new Item(cmdtokensX[0], cmdtokensX[1]);
-        ItemRepository daoX = new ItemRepository();
-        daoX.insert(playerX);
+        Item playerX = new Item(ItemUtil.extractNumberFromInput(cmdtokensX[0]), cmdtokensX[1]);
+        System.out.println("## 01: " + playerX.toString());
+        ItemRepository dao = new ItemRepository();
+        dao.insert(playerX);
 
-        System.out.println("Player O enter your name in the format \"Tag_Number,Name\". Note: Quotation marks are included. ");
+        System.out.println("Player O enter your name in the format \"Tag_Number,Name. Note: First Quotation mark is included. ");
         sc = new Scanner(System.in);
         String commandO = sc.nextLine();
         String[] cmdtokensO = commandO.split(",");
-        Item playerO = new Item(cmdtokensO[0], cmdtokensO[1]);
-        ItemRepository daoO = new ItemRepository();
-        daoO.insert(playerO);
+        Item playerO = new Item(ItemUtil.extractNumberFromInput(cmdtokensO[0]), cmdtokensO[1]);
+        System.out.println("## 02: " + playerO.toString());
+        //ItemRepository dao = new ItemRepository();
+        dao.insert(playerO);
 
         TicTacToe game = new TicTacToe();
 
@@ -53,8 +45,6 @@ public class App {
         game.updateBoard();
         game.makeBoard();
         System.out.println("Player X kindly start the game by picking a number");
-        
-
        
         while (winner == null) {
             int num = input.nextInt();
@@ -64,11 +54,6 @@ public class App {
             }
 
             game.position[num-1] = ( String.valueOf(num) );  // This line is use to force the condition below to work
-            /*
-            System.out.println(num);
-            System.out.println(String.valueOf(num));
-            System.out.println(position[num-1]); 
-            */
 
             if (game.position[num-1].equals( String.valueOf(num) )) {
 				game.position[num-1] = turn;

@@ -1,10 +1,13 @@
 package com.model;
 
+/**
+ * Make an item list of number of players and their names. 
+ */
 public class Item implements Comparable<Item> {
-    String id;
+    int id;
     String name;
 
-    public Item(String id, String name) {
+    public Item(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -12,12 +15,12 @@ public class Item implements Comparable<Item> {
 
     @Override
     public String toString() {
-        return "Item [id=" + id + ", name=" + name + "]";
+        return  id + "," + name;
     }
 
     @Override
     public int compareTo(Item item) {
-        return id.compareTo(item.id);
+        return Integer.valueOf(id).compareTo(item.id);
     }
     
 }

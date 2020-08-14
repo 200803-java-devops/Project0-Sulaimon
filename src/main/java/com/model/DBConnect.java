@@ -12,6 +12,9 @@ import java.sql.Statement;
 import java.util.Properties;
 import java.util.Scanner;
 
+/**
+ * Set up connection access to database(postgres was used)
+ */
 public class DBConnect {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Properties properties = new Properties();

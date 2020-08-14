@@ -11,14 +11,14 @@ import java.util.Scanner;
  */
 
 public class ItemRepository {
-    private static String filename = "register.csv";
+    private static String filename = "Register.csv";
 
     public List<Item> load() {
         List<Item> register = new ArrayList<>();
         try (Scanner sc = new Scanner(new File(filename))) {
             while (sc.hasNext()) {
                 String[] item = sc.nextLine().split(",");
-                register.add(new Item(item[0], item[1]));
+                register.add(new Item(ItemUtil.extractNumberFromInput(item[0]), item[1])); 
             }
         } catch (Exception e) {
             System.err.println(e);
@@ -31,6 +31,7 @@ public class ItemRepository {
         try (FileWriter fileWriter = new FileWriter(filename)) {
             for(Item i : table) {
                 fileWriter.write(i.toString() + "\n");
+                System.out.println("SaveToFile: " + i.toString());
             }
         } catch (Exception e) {
             System.err.println(e);
@@ -39,9 +40,12 @@ public class ItemRepository {
     }
 
     public void insert(Item item) {
-        List<Item> table = load();
-        table.add(item);
-        save(table);
+        try (FileWriter fileWriter = new FileWriter(filename, true)) {
+            fileWriter.append(item.toString() + "\n");
+            System.out.println("SaveToFile: " + item.toString());
+        } catch (Exception e) {
+            System.err.println(e);
+        }
 
     }
     
