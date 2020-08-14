@@ -7,10 +7,11 @@ import java.io.*;
 public class App {
 
     static Scanner input;
+    static Scanner sc;
     static Scanner read;
 
     public static void main(String[] args) throws IOException {
-
+/*
         read = new Scanner(System.in);
         Register player = new Register();
         System.out.print("Enter your ID number: " + '\n');
@@ -23,6 +24,23 @@ public class App {
         player.setName2(read.nextLine());
         Register.print();
         //read.close();
+*/
+        System.out.println('\n' + "Game begins with player X" + '\n');
+        System.out.println("Player X enter your name in the format \"Tag_Number,Name\". Note: Quotation marks are included.");
+        sc = new Scanner(System.in);
+        String commandX = sc.nextLine();
+        String[] cmdtokensX = commandX.split(",");
+        Item playerX = new Item(cmdtokensX[0], cmdtokensX[1]);
+        ItemRepository daoX = new ItemRepository();
+        daoX.insert(playerX);
+
+        System.out.println("Player O enter your name in the format \"Tag_Number,Name\". Note: Quotation marks are included. ");
+        sc = new Scanner(System.in);
+        String commandO = sc.nextLine();
+        String[] cmdtokensO = commandO.split(",");
+        Item playerO = new Item(cmdtokensO[0], cmdtokensO[1]);
+        ItemRepository daoO = new ItemRepository();
+        daoO.insert(playerO);
 
         TicTacToe game = new TicTacToe();
 
@@ -31,11 +49,12 @@ public class App {
         String turn = "X";
         String winner = null;
 
-        System.out.println("Game begins ...");
 
         game.updateBoard();
         game.makeBoard();
-            
+        System.out.println("Player X kindly start the game by picking a number");
+        
+
        
         while (winner == null) {
             int num = input.nextInt();
