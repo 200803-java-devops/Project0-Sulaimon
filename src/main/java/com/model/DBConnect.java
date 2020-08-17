@@ -28,7 +28,6 @@ public class DBConnect {
             query = sc.nextLine();
             Statement statement2 = connection.createStatement();
             statement2.execute(query);
-
             
         } catch (SQLException e) {
             System.err.println(e.getMessage());
