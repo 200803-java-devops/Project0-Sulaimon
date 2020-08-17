@@ -16,15 +16,15 @@ import java.util.Scanner;
 public class DBConnect {
     public void DBC() {
         String query;
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "Ol0.");
+        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/tttdb", "tttdb", "tttdb");
                 Scanner sc = new Scanner(System.in)) {
-            System.out.println("postgres=> ");
+            System.out.println("tttdb=> ");
             query = sc.nextLine();
             Statement statement1 = connection.createStatement();
             statement1.execute(query);
             // result = statement.execute("select * from players where id = ' " + id + "'");
 
-            System.out.println("postgres=> ");
+            System.out.println("tttdb=> ");
             query = sc.nextLine();
             Statement statement2 = connection.createStatement();
             statement2.execute(query);
