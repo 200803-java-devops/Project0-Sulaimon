@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="9" failures="0" name="com.model.AppTest" time="0.23" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="14.0.2+12-46"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\OpenJDK\jdk-14.0.2\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/oyeoy/Desktop/Revature/WeekJava/Project0-Sulaimon"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\oyeoy\Desktop\Revature\WeekJava\Project0-Sulaimon"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="14.0.2+12-46"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\oyeoy\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\OpenJDK\jdk-14.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\oyeoy\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\Microsoft VS Code\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin;C:\Program Files\OpenJDK\jdk-14.0.2\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\PostgreSQL\12\bin;C:\Users\oyeoy\anaconda3;C:\Users\oyeoy\anaconda3\Library\mingw-w64\bin;C:\Users\oyeoy\anaconda3\Library\usr\bin;C:\Users\oyeoy\anaconda3\Library\bin;C:\Users\oyeoy\anaconda3\Scripts;C:\Users\oyeoy\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2020.1.2\bin;."/>
+    <property name="maven.conf" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="58.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3/lib/jansi-native"/>
+    <property name="user.home" value="C:\Users\oyeoy"/>
+    <property name="user.timezone" value="America/Chicago"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.specification.version" value="14"/>
+    <property name="user.name" value="Sulaimon"/>
+    <property name="java.class.path" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean compile package"/>
+    <property name="java.home" value="C:\Program Files\OpenJDK\jdk-14.0.2"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="14.0.2"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="maven.home" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2020-07-14"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.model.AppTest" name="right_diagonal_Test" time="0.034"/>
+  <testcase classname="com.model.AppTest" name="vertical_1_Test" time="0.018"/>
+  <testcase classname="com.model.AppTest" name="vertical_2_Test" time="0.017"/>
+  <testcase classname="com.model.AppTest" name="vertical_3_Test" time="0.015"/>
+  <testcase classname="com.model.AppTest" name="horizontal_1_Test" time="0.014"/>
+  <testcase classname="com.model.AppTest" name="horizontal_2_Test" time="0.014"/>
+  <testcase classname="com.model.AppTest" name="horizontal_3_Test" time="0.008"/>
+  <testcase classname="com.model.AppTest" name="left_diagonal_Test" time="0.096"/>
+  <testcase classname="com.model.AppTest" name="tic_tac_toe_Test" time="0.014"/>
+</testsuite>
