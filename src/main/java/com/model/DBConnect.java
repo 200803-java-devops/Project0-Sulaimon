@@ -12,6 +12,7 @@ import java.util.Scanner;
 /**
  * Set up connection access to database(postgres was used)
  */
+
 public class DBConnect {
     public void DBC() {
         String query;

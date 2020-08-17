@@ -78,6 +78,5 @@ public class App {
 		} else {
 			System.out.println( winner + " won.");
 		} 
-
     }
 }
