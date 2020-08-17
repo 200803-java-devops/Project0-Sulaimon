@@ -34,6 +34,9 @@ public class App {
         //ItemRepository dao = new ItemRepository();
         dao.insert(playerO);
 
+        DBConnect db = new DBConnect();
+        db.DBC();
+        
         TicTacToe game = new TicTacToe();
 
         input = new Scanner(System.in);
