@@ -9,7 +9,6 @@ import java.util.Scanner;
 /**
  * This class job is to access the Database (ItemRepository == DataAccessObject)
  */
-
 public class ItemRepository {
     private static String filename = "Register.csv";
 
@@ -24,7 +23,6 @@ public class ItemRepository {
             System.err.println(e);
         }
         return register;
-    
     }
     
     public void save(List<Item> table) {
@@ -36,7 +34,6 @@ public class ItemRepository {
         } catch (Exception e) {
             System.err.println(e);
         }
-
     }
 
     public void insert(Item item) {
@@ -46,7 +43,5 @@ public class ItemRepository {
         } catch (Exception e) {
             System.err.println(e);
         }
-
     }
-    
 }

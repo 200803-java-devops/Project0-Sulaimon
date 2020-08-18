@@ -3,7 +3,6 @@ package com.model;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
-//import java.util.HashMap;
 
 public class Register {
 
@@ -28,17 +27,6 @@ public class Register {
         Register.name2 = name2;
     }
     
-    /*
-    static HashMap<Integer, String> player1;
-    static HashMap<Integer, String> player2;
-
-    public void setplayer2(int id2, String name2) {
-        Register.player2 = player2;
-    }
-    */
-
-    
-
     public static void print() {
 
         File file = new File("Register.txt");
@@ -54,5 +42,4 @@ public class Register {
             System.err.println("Error creating file");
         }
 	}
-
 }

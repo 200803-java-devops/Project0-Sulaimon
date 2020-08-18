@@ -12,7 +12,6 @@ public class Actions {
         String turn = "X";
         String winner = null;
 
-
         game.updateBoard();
         game.makeBoard();
         System.out.println("Player X kindly start the game by picking a number");

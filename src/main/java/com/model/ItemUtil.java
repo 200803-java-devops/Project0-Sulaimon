@@ -16,8 +16,7 @@ public class ItemUtil {
         while(m.find()) {
             System.out.println(m.group());
             buffer.append(m.group());
-        }
-        
+        } 
         return Integer.parseInt(buffer.toString());
     }
 }

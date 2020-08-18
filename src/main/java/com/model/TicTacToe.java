@@ -76,7 +76,6 @@ public class TicTacToe {
         
         System.out.println("Next player pick any number not selected");
         return null;
-    }
-            
+    }           
 }
 

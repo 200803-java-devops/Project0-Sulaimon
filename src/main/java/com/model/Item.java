@@ -12,7 +12,6 @@ public class Item implements Comparable<Item> {
         this.name = name;
     }
 
-
     @Override
     public String toString() {
         return  id + "," + name;
@@ -21,6 +20,5 @@ public class Item implements Comparable<Item> {
     @Override
     public int compareTo(Item item) {
         return Integer.valueOf(id).compareTo(item.id);
-    }
-    
+    }  
 }

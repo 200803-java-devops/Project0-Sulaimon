@@ -3,4 +3,3 @@ create table players (
     player text
 );
 
-insert into  players values ('1', 'Sly');
