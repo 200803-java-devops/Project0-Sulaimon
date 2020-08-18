@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Before;
 
-public class AppTest {
+public class TicTacToeTest {
 
     private void assertEquals(String expected, String actual) {
     }
