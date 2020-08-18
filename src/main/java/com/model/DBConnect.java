@@ -19,13 +19,13 @@ public class DBConnect {
             query = sc.nextLine();
             Statement statement1 = connection.createStatement();
             statement1.execute(query);
-
+/*
             System.out.println("tttdb=> ");
             query = sc.nextLine();
             Statement statement2 = connection.createStatement();
             statement2.execute(query);
             sc.close();
-            
+*/            
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
