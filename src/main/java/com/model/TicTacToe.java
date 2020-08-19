@@ -61,9 +61,9 @@ public class TicTacToe {
             }
             
 			if (line.equals("XXX")) {
-				return "X wins";
+				return "Player X wins";
 			} else if (line.equals("OOO")) {
-				return "O wins";
+				return "Player O wins";
 			    }
         }
         
